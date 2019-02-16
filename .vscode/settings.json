@@ -1,11 +1,11 @@
 {
   "python.formatting.provider": "black",
   "python.pythonPath": "C:\\Users\\NewVici\\Anaconda3\\python.exe",
-  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Enabled": false,
   "python.linting.enabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.pep8Enabled": false,
-  "djangointellisense.projectRoot": "C:\\Users\\NewVici\\Dropbox\\=Django=\\Recipe\\Recipe-API\\app",
-  "djangointellisense.settingsModule": "app.settings",
+  // "djangointellisense.projectRoot": "C:\\Users\\NewVici\\Dropbox\\=Django=\\Recipe\\Recipe-API\\app",
+  // "djangointellisense.settingsModule": "app.settings",
   // "djangointellisense.debugMessages": Enable extension debug messages,
 }

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 from django.contrib.auth.models import (
     AbstractBaseUser,
     PermissionsMixin,
@@ -37,3 +38,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = "email"
+
+
+class Tag(models.Model):
+    """Tag to be used for a recipe."""
+    name = models.CharField(max_length=255)
+    user = models.ForeignKey(get_user_model(), null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+    
