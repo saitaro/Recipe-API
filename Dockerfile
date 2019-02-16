@@ -1,5 +1,5 @@
 FROM python:3.7-alpine
-LABEL maintainer="Victor B" 
+LABEL maintainer="Victor B"
 
 ENV PYTHONUNBUFFERED 1
 
