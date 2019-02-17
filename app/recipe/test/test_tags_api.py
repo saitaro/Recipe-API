@@ -34,7 +34,6 @@ class PrivateTagsApiTests(TestCase):
 
     def test_retrieve_tags(self):
         """Test that the tags get retrieved."""
-
         Tag.objects.create(user=self.user, name='Vegan')
         Tag.objects.create(user=self.user, name='Dessert')
 
