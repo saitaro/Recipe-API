@@ -13,6 +13,7 @@ class UserSerializer(ModelSerializer):
         fields = 'email', 'password', 'name'
         extra_kwargs = {
             'password': {
+                'style': {'input_type': 'password'},
                 'write_only': True,
                 'min_length': 5,
             },
