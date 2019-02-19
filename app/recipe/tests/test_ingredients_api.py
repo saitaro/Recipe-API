@@ -48,7 +48,7 @@ class PrivateIngredientsApiTests(TestCase):
         self.assertEqual(response.data, serializer.data)
 
     def test_ingredients_limited_to_user(self):
-        """Test that only the ingredient of the auth'd user are returned."""
+        """Test that only the ingredient of the auth'ed user are returned."""
         user2 = get_user_model().objects.create_user('another@google.com',
                                                      'anotherpass')
         Ingredient.objects.create(user=user2, name='Salt')
@@ -73,7 +73,7 @@ class PrivateIngredientsApiTests(TestCase):
                                                name=payload['name'])
         self.assertTrue(ingredient.exists())
 
-    def test_create_invalid_ingredient(self):
+    def test_create_ingredient_invalid(self):
         """Test creating invalid ingredient fails."""
         payload = {'name': ''}
         response = self.client.post(INGREDIENTS_URL, payload)

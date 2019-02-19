@@ -10,8 +10,7 @@ TOKEN_URL = reverse('user:token')
 ME_URL = reverse('user:me')
 
 
-def create_user(**params):
-    return get_user_model().objects.create_user(**params)
+create_user = get_user_model().objects.create_user
 
 
 class PublicUserAPITests(TestCase):
